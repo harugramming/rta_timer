@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- jQueryの読み込み -->
+    <title>Ajax、PHP、MySQLの連携</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 指定したidからレコード取得 -->
+    <div class="show_products">
+        名前を入力:<input id="Username"><br>
+        <!-- 取得したレコードを表示 -->
+        <div id="result">
+        </div>
+        <!-- 送信ボタン -->
+        <button id="ajax_show">show 名前を送信、レコードを取得</button>
+        <!-- 削除ボタン -->
+        <button id="ajax_delete">delete 名前を送信、レコードを削除</button>
+        <!-- 更新ボタン -->
+        <button id="ajax_update">update 名前を送信、レコードを更新</button>
+    </div>
+
+
+    <!-- レコード追加
+    <div class="add_products">
+        <!- 入力フォーム -->
+        <!-- 商品名を入力:<input id="name"><br>
+        価格を入力:<input id="price"><br> -->
+        <!-- レコード追加後に入力内容を表示 -->
+        <!-- <div id="add_result">
+        </div> -->
+        <!-- 送信ボタン -->
+        <!-- <button id="ajax_add">追加ボタン</button>
+    </div> -->
+    <!-- レコード全件取得 -->
+    <!-- 追加したレコードも即時反映される -->
+    <!-- <table border="1" id="all_show_result">
+        <tr>
+            <th>id</th><th>商品名</th><th>価格</th>
+        </tr>
+    </table>  -->
+
+
+    <script src="./ajax_test.js"></script>
+</body>
+</html>

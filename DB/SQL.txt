@@ -1,0 +1,112 @@
+//データベース の作成
+CREATE DATABASE rta_timer;
+
+//データベース の移動
+USE rta_timer;
+
+//文字コードの設定
+set names utf8mb4;
+
+//文字コードの確認
+show variables like "char%";
+
+//テーブルの作成
+CREATE TABLE records (
+  UserName varchar(100),
+  GameTitle varchar(100),
+  SegmentName varchar(100),
+  SegmentNumber int(100),
+  PbSumTime float,
+  PbSegmentTime float,
+  SegmentTimeBest float
+);
+
+//データの追加
+INSERT INTO records values ('はる','test', '砦', 1, 1000, 1000, 1000);
+INSERT INTO records values ('はる','test', 'クッパ', 2, 2000, 1000, 1000);
+INSERT INTO records values ('はる','test', 'ぺんぎん', 3, 3000,  1000, 1000);
+INSERT INTO records values ('はる','test', '砂漠', 4, 4000, 1000, 1000);
+INSERT INTO records values ('はる','test', '火山', 5, 5000,  1000, 1000);
+INSERT INTO records values ('はる','test', 'やみとけ', 6, 6000,  1000, 1000);
+INSERT INTO records values ('はる','test', '二階in', 7, 7000,  1000, 1000);
+INSERT INTO records values ('はる','test', 'みずびた', 8, 8000,  1000, 1000);
+INSERT INTO records values ('はる','test', 'ちびでか', 9, 9000,  1000, 1000);
+INSERT INTO records values ('はる','test', 'たかいたかい', 10, 10000, 1000, 1000);
+INSERT INTO records values ('はる','test', 'スノーマンズ', 11, 11000, 1000, 1000);
+INSERT INTO records values ('はる','test', 'チクタク', 12, 12000, 1000, 1000);
+INSERT INTO records values ('はる','test', 'レインボー', 13, 13000,  1000, 1000);
+INSERT INTO records values ('はる','test', 'ゴール', 14, 14000,  1000, 1000);
+
+
+INSERT INTO records values ('はる','test', '砦', 1, 402900, 402900, 400600);
+INSERT INTO records values ('はる','test', 'クッパ', 2, 684100, 281200, 276500);
+INSERT INTO records values ('はる','test', 'ぺんぎん', 3, 968000,  283800, 282500);
+INSERT INTO records values ('はる','test', '砂漠', 4, 1243400, 275400, 264800);
+INSERT INTO records values ('はる','test', '火山', 5, 1597000,  353600, 308400);
+INSERT INTO records values ('はる','test', 'やみとけ', 6, 1862000,  265000, 229000);
+INSERT INTO records values ('はる','test', '二階in', 7, 2198300,  336300, 336300);
+INSERT INTO records values ('はる','test', 'みずびた', 8, 2436000, 237000, 236000);
+INSERT INTO records values ('はる','test', 'ちびでか', 9, 2579500,  143500, 138600);
+INSERT INTO records values ('はる','test', 'たかいたかい', 10, 2831200, 251700, 229400);
+INSERT INTO records values ('はる','test', 'スノーマンズ', 11, 3032700, 201400, 182300);
+INSERT INTO records values ('はる','test', 'チクタク', 12, 3355000, 322300, 322300);
+INSERT INTO records values ('はる','test', 'レインボー', 13, 3529600,  174600, 156100);
+INSERT INTO records values ('はる','test', 'ゴール', 14, 3766200,  236600, 164600);
+
+
+INSERT INTO records values ('町野','test', '砦', 1, 402900, 402900, 400600);
+INSERT INTO records values ('町野','test', 'クッパ', 2, 684100, 281200, 276500);
+INSERT INTO records values ('町野','test', 'ぺんぎん', 3, 968000,  283800, 282500);
+INSERT INTO records values ('町野','test', '砂漠', 4, 1243400, 275400, 264800);
+INSERT INTO records values ('町野','test', '火山', 5, 1597000,  353600, 308400);
+INSERT INTO records values ('町野','test', 'ゴール', 6, 3766200,  236600, 164600);
+
+INSERT INTO records values ('ベスト','test', '砦', 1, 2000, 2000, 1000);
+INSERT INTO records values ('ベスト','test', 'クッパ', 2, 4000, 2000, 1000);
+INSERT INTO records values ('ベスト','test', 'ぺんぎん', 3, 6000,  2000, 1000);
+INSERT INTO records values ('ベスト','test', '砂漠', 4, 8000, 2000, 1000);
+INSERT INTO records values ('ベスト','test', '火山', 5, 10000,  2000, 1000);
+INSERT INTO records values ('ベスト','test', '砦', 6, 12000, 2000, 1000);
+INSERT INTO records values ('ベスト','test', 'クッパ', 7, 14000, 2000, 1000);
+INSERT INTO records values ('ベスト','test', 'ぺんぎん', 8, 16000,  2000, 1000);
+INSERT INTO records values ('ベスト','test', '砂漠', 9, 18000, 2000, 1000);
+INSERT INTO records values ('ベスト','test', '火山', 10, 20000,  2000, 1000);
+
+INSERT INTO records values ('町野16枚','Mario64', '砦6枚', 1, 357500, 357500, 336200);
+INSERT INTO records values ('町野16枚','Mario64', '雪山9枚', 2, 506000, 148600, 137800);
+INSERT INTO records values ('町野16枚','Mario64', 'DW', 3, 616400,  110400, 110400);
+INSERT INTO records values ('町野16枚','Mario64', '砂漠11枚', 4, 714600, 98200, 75300);
+INSERT INTO records values ('町野16枚','Mario64', '闇溶け15枚', 5, 890400,  175800, 86700);
+INSERT INTO records values ('町野16枚','Mario64', 'DDD16枚', 6, 1035400,  145000, 136200);
+INSERT INTO records values ('町野16枚','Mario64', 'BitFS', 7, 1179500, 144100, 120300);
+INSERT INTO records values ('町野16枚','Mario64', '天空in', 8, 1249600, 70100, 65700);
+INSERT INTO records values ('町野16枚','Mario64', 'ザ・エンド', 9, 1435300,  185700, 174200);
+
+
+
+INSERT INTO records values ('はる','Mario64', '砦6枚', 1, 357500, 357500, 336200);
+INSERT INTO records values ('はる','Mario64', '雪山9枚', 2, 506000, 148600, 137800);
+INSERT INTO records values ('はる','Mario64', 'DW', 3, 616400,  110400, 110400);
+INSERT INTO records values ('はる','Mario64', '砂漠11枚', 4, 714600, 98200, 75300);
+INSERT INTO records values ('はる','Mario64', '闇溶け15枚', 5, 890400,  175800, 86700);
+INSERT INTO records values ('はる','Mario64', 'DDD16枚', 6, 1035400,  145000, 136200);
+INSERT INTO records values ('はる','Mario64', 'BitFS', 7, 1179500, 144100, 120300);
+INSERT INTO records values ('はる','Mario64', '天空in', 8, 1249600, 70100, 65700);
+INSERT INTO records values ('はる','Mario64', 'ザ・エンド', 9, 1435300,  185700, 174200);
+
+INSERT INTO records values ('test','test', '砦', 1, 10000, 2000, 1000);
+INSERT INTO records values ('test','test', 'クッパ', 2, 20000, 2000, 1000);
+INSERT INTO records values ('test','test', 'ぺんぎん', 3, 30000,  2000, 1000);
+INSERT INTO records values ('test','test', '砂漠', 4, 40000, 2000, 1000);
+INSERT INTO records values ('test','test', '火山', 5, 50000,  2000, 1000);
+INSERT INTO records values ('test','test', '砦', 6, 60000, 2000, 1000);
+INSERT INTO records values ('test','test', 'クッパ', 7, 70000, 2000, 1000);
+INSERT INTO records values ('test','test', 'ぺんぎん', 8, 80000,  2000, 1000);
+INSERT INTO records values ('test','test', '砂漠', 9, 90000, 2000, 1000);
+INSERT INTO records values ('test','test', '火山', 10, 100000,  2000, 1000);
+
+        // save = "<div id=end_save>";
+        // save += "<div>区間ベストを保存しますか？</div>";
+        // save += "<button id=no>いいえ</button>";
+        // save += "<button id=yes>はい</button>";
+        // save += "</div>";

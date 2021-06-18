@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="editor.css">
+    <script src="https://kit.fontawesome.com/5dc13e3d60.js" crossorigin="anonymous"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>RTAのタイマーです</title>
+  </head>
+  <body>
+  <header>
+    <h1>RTA Timer</h1>
+    <nav class="pc-nav">
+      <ul>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+
+      <div id="rap_timer">
+        <div id="timer_header">
+          <div class="inputWithIcon">
+            <input type="text" placeholder="Your name" id="user_name1">
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+          </div>
+            <i class="fas fa-paper-plane" id="send_username"></i>
+        </div>
+        <div id="timer_body">
+          <div id="rap_display">
+            <div class="seg">
+            </div>
+          </div>
+          <div id="real_timer">
+            <div id="all_timer">00:00.0</div>
+            <div id="segment_timer">00:00.0</div>
+          </div>
+          <div id="real_condition">
+            <div id="Previous_Segment">
+              <div>Previous_Segment</div>
+              <div class="condition_times" id="PS_time">00:00</div>
+            </div>
+            <div id="Previous_Segment_PB">
+              <div>Previous_Segment(PB)</div>
+              <div class="condition_times" id="PS_PB_time">00:00</div>
+            </div>
+            <div id="Possible_Time_Save">
+              <div>Possible_Time_Save</div>
+              <div class="condition_times" id="PBT_time">00:00</div>
+            </div>
+            <div id="Best_Possible_Time">
+              <div>Best_Possible_Time</div>
+              <div class="condition_times" id="BPT_time">00:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lap_editor" hidden>
+          <div id="add_button_segment">
+              <i class="fas fa-plus" id="add_button"></i>
+          </div>
+
+          <div id="segment_editor">
+              <div class="segment_form" id="segmentform0">
+                  <i class="fas fa-minus" id="minus_button1"></i>
+                  <nobr>1</nobr>
+                  <input type="text" name="name" class="segment_name" placeholder=" 区間名">
+                  <i class="far fa-arrow-alt-circle-up fa-lg" id="up_button1"></i>
+                  <i class="far fa-arrow-alt-circle-down fa-lg" id="down_button1"></i>
+                  <div class="segline">
+                    <div>終了時タイム(PB)</div><input type="text" name="name" class="pbsumtime" placeholder="○○:○○">
+                  </div>
+                  <div class="segline">
+                    <div>区間タイム（PB）</div><input type="text" name="name" class="pbsegtime" placeholder="○○:○○">
+                  </div>
+                  <div class="segline">
+                    <div>区間タイム（最速)</div><input type="text" name="name" class="bestsegtime" placeholder="○○:○○">
+                  </div>
+                </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pages_btn">
+        <div class="home_btn">
+            <a href="#" class="btn-real">
+              <i class="fas fa-home" id="home_button"></i>
+            </a>
+            <div>Home</div>
+        </div>
+        <div class="edit_btn">
+            <a href="#" class="btn-real">
+              <i class="fas fa-edit" id="edit_button"></i>
+            </a>
+            <div>edit</div>
+        </div>
+      </div>
+  </div>
+
+    <div id="end_save" hidden>
+      <div>区間ベストを保存しますか？</div>
+      <input type='button' id="no" value='いいえ'>
+      <input type='button' id="yes" value='はい'>
+    </div>
+
+
+  <div class="button-container" id="home_btn_container">
+    <input type='button' class="btn-shine" id="start" value='START'>
+    <input type='button' class="btn-shine" id="reset" value='RESET'>
+  </div>
+  <div class="button-container" hidden id="edit_btn_container">
+    <input type="button" class="btn-shine" id="save" value="セーブ">
+    <input type="button" class="btn-shine" id="cancel" value="キャンセル">
+  </div>
+
+  <div id="PB-containers" hidden>
+    <div id="PB-container" hidden>
+      <p>New record!!</p>
+      <input type='button' id="pb_save" value='SAVE'>
+    </div>
+  </div>
+
+  <div class="textcontents">
+    <h1>このアプリについて</h1>
+    <p>ゲームのタイムアタック用タイマーです。</p>
+    <p>自己記録の保存、計測時における自己ベストとのタイムの比較などができます。</p>
+  </div>
+  <div class="textcontents">
+    <h1>使い方</h1>
+    <p>はじめに、記録保存用のユーザ名の登録、各区間名の登録を行います。</p>
+    <ol>
+    <li>editボタン押下</li>
+    <li>ユーザ名の登録<br>Your name 欄に名前を入力してください。<br>注）このとき入力欄右側の送信ボタンは押下しないでください。</li>
+    <li>区間名を記入<br>+（プラス）ボタンを押下することで登録する区間の数を増やすことができます。<br>終了時タイム（PB）、区間タイム（PB)、区間タイム（最速）は空欄でも動作します。</li>
+    <li>セーブボタン押下</li>
+    </ol>
+    <p>次に、登録した区間データをタイマーに表示させます。</p>
+    <ol>
+    <li>Homeボタン押下</li>
+    <li>ユーザ名の入力<br>先ほど登録した、ユーザ名を Your name 欄に入力してください。</li>
+    <li>送信ボタン押下により、区間データの表示<br>Your name 欄 右側のボタンが送信ボタンとなります。</li>
+    </ol>
+
+  </div>
+  <div class="textcontents">
+    <h1>各用語の説明</h1>
+    <ul>
+      <li>Previous_Segment</li>
+      <li>Previous_Segment(PB)</li>
+      <li>Possible_Time_Save</li>
+      <li>Best_Possible_Time</li>
+    </ul>
+  </div>
+  <div class="textcontents">
+    <h1>連絡先</h1>
+    <p>e-mail: haruuchi.pool.0219@gmail.com</p>
+    <p>twitter: @aaaaaaaa</p>
+
+  </div>
+
+    <footer></footer>
+    <script src='./getTimetoInt.js'></script>
+    <script src='./editor.js'></script>
+    <script src='./stopwatch.js'></script>
+  </body>
+</html>

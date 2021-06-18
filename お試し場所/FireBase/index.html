@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>HTMLの書き方</title>
+  </head>
+  <body>
+  <header></header>
+  <div id="rap_timer">
+    <div id="timer_header">
+      <div>super Mario 64</div>
+      <div>120 Star</div>
+    </div>
+    <div id="rap_display">
+      <div class="rap"></div>
+    </div>
+    <div id="real_timer">
+      <div id="all_timer">00:00.0</div>
+      <div id="segment_timer">00:00.0</div>
+    </div>
+    <div id="real_condition">
+      <div id="Previous_Segment">Previous_Segment</div>
+      <div id="Previous_Segment_PB">Previous_Segment(PB)</div>
+      <div id="Possible_Time_Save">Possible_Time_Save</div>
+      <div id="Best_Possible_Time">Best_Possible_Time</div>
+    </div>
+    <div id="timer_footer">
+      simply is god
+    </div>
+    
+        <div>
+          メールアドレス<input id="mailAddress" type="mailAddress" required/>
+        </div>
+        <div>
+          パスワード<input id="password" type="password" required/>
+        </div>
+          <button id="login">ログイン</button>
+          <button id="register">新規登録</button>
+
+          <div>
+            <div>
+                <input type="text" id="name">
+            </div>
+            <div>
+                 <textarea id="message" row="10"></textarea>
+                 <button id="send">send</button>
+            </div>
+            <div id="output"></div>
+        </div>
+
+        <div>
+              <input type="text" id="segment_name1"></intput>
+
+        </div>
+        <intput type="text" id="segment_time1"></intput>
+        <div>
+          <div>
+              <input type="text" id="segment_name2"></intput>
+              <intput type="text" id="segment_time2"></intput>
+          </div>
+        </div>
+        <div>
+          <div>
+              <input type="text" id="segment_name3"></intput>
+              <intput type="text" id="segment_time3"></intput>
+          </div>
+        </div>
+        <button id="send2">保存</button>
+
+  </div>
+
+    <div class='button'>
+      <input type='button' id='start' value='START'>
+      <input type='button' id='reset' value='RESET'>
+    </div>
+
+  </div>
+
+  
+
+  <footer></footer>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD6mdQRHP_MRG4zuU8nZlnJ_OqCD54Ibfw",
+    authDomain: "test-a3f3c.firebaseapp.com",
+    databaseURL: "https://test-a3f3c-default-rtdb.firebaseio.com",
+    projectId: "test-a3f3c",
+    storageBucket: "test-a3f3c.appspot.com",
+    messagingSenderId: "152215952937",
+    appId: "1:152215952937:web:b4da56aa2566b2748c4638",
+    measurementId: "G-112GZQDM09"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src='./stopwatch.js'></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>FireBase_DBへの保存</title>
+  </head>
+
+  <article>
+    <p>名前</p>
+    <input type="text" id="username">
+    <div>
+      ----------------------------------------------
+    </div>
+    <p>区間名 / タイム</p>
+    <div>
+      <div>
+        <div>
+            <input type="text" id="name1">
+            <input type="text" id="time1">
+        </div>
+        <div>
+            <input type="text" id="name2">
+            <input type="text" id="time2">
+        </div>
+        <div>
+          <input type="text" id="name3">
+          <input type="text" id="time3">
+        </div>
+        <div>
+          <input type="text" id="name4">
+          <input type="text" id="time4">
+        </div>
+        <div>
+          <input type="text" id="name5">
+          <input type="text" id="time5">
+        </div>
+        <div>
+             <button id="send">send</button>
+        </div>
+        <div>
+          ----------------------------------------------
+        </div>
+        <div>
+          DBのパス：<input type="text" id="db_path">
+          <button id="output">output</button>
+     </div>
+      </div>
+    </div>
+    <div>
+      ----------------------------------------------
+    </div>
+    <div>
+      <input type="text" id="name_output1">
+      <input type="text" id="time_output1">
+    </div>
+    <div>
+      <input type="text" id="name_output2">
+      <input type="text" id="time_output2">
+    </div>
+    <div>
+      <input type="text" id="name_output3">
+      <input type="text" id="time_output3">
+    </div>
+    <div>
+      <input type="text" id="name_output4">
+      <input type="text" id="time_output4">
+    </div>
+    <div>
+      <input type="text" id="name_output5">
+      <input type="text" id="time_output5">
+    </div>
+  </article>
+  <body>
+
+
+
+
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD6mdQRHP_MRG4zuU8nZlnJ_OqCD54Ibfw",
+    authDomain: "test-a3f3c.firebaseapp.com",
+    databaseURL: "https://test-a3f3c-default-rtdb.firebaseio.com",
+    projectId: "test-a3f3c",
+    storageBucket: "test-a3f3c.appspot.com",
+    messagingSenderId: "152215952937",
+    appId: "1:152215952937:web:b4da56aa2566b2748c4638",
+    measurementId: "G-112GZQDM09"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src='./stopwatch.js'></script>
+  </body>
